@@ -1,10 +1,12 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "[SCS]",IntroEnabled = true,IntroText = "SCS", HidePremium = false, SaveConfig = true, ConfigFolder = "SCS"})
+local Window = OrionLib:MakeWindow({Name = "[SCS]MVSD",IntroEnabled = true,IntroText = "SCS", HidePremium = false, SaveConfig = true, ConfigFolder = "SCS"})
 
 local MainTab = Window:MakeTab({
     Name = "Main Tab",
     Icon = "rbxassetid://17079723134"
 })
+
+MainTab:AddLabel("Main")
 
 MainTab:AddButton({
 	Name = "Hitbox",
@@ -36,21 +38,42 @@ end)
   	end    
 })
 
+MainTab:AddLabel("Fov")
+
 MainTab:AddButton({
 	Name = "ESP",
 	Callback = function()
-      		https://pastebin.com/raw/rSUGN1fK
+      		loadstring(game:HttpGet"https://pastebin.com/raw/rSUGN1fK")()
   	end    
 })
 
-local MainTab = Window:MakeTab({
-    Name = "Credits",
-    Icon = "rbxassetid://17079723134"
+MainTab:AddButton({
+	Name = "Normal Fov",
+	Callback = function()
+      		local FOV = 60
+game.Workspace.Camera.FieldOfView = FOV
+  	end    
+})
+
+MainTab:AddButton({
+	Name = "Fov 90",
+	Callback = function()
+      		local FOV = 90
+game.Workspace.Camera.FieldOfView = FOV
+  	end    
+})
+
+MainTab:AddButton({
+	Name = "Fov 120",
+	Callback = function()
+      		local FOV = 120
+game.Workspace.Camera.FieldOfView = FOV
+  	end    
 })
 
 MainTab:AddLabel("UI:Orion")
 
-MainTab:AddLabel("Made By:awes0me & Ksawier")
+MainTab:AddLabel("Made By:awes0me")
 
 MainTab:AddLabel("Made In April 13, 2024")
 
