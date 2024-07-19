@@ -1,0 +1,57 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "[SCS]MVSD",IntroEnabled = true,IntroText = "SCS", HidePremium = false, SaveConfig = true, ConfigFolder = "SCS"})
+
+local MainTab = Window:MakeTab({
+    Name = "Main Tab",
+    Icon = "rbxassetid://17079723134"
+})
+
+MainTab:AddButton({
+	Name = "Hitbox",
+	Callback = function()
+      	_G.HeadSize = 20
+_G.Disabled = true
+
+game:GetService('RunService').RenderStepped:Connect(function()
+    if _G.Disabled then
+        for _, player in ipairs(game:GetService('Players'):GetPlayers()) do
+            if player.Name ~= game:GetService('Players').LocalPlayer.Name then
+                pcall(function()
+                    local character = player.Character
+                    local humanoidRootPart = character and character:FindFirstChild("HumanoidRootPart")
+                    if humanoidRootPart then
+                        humanoidRootPart.Size = Vector3.new(_G.HeadSize, _G.HeadSize, _G.HeadSize)
+                        humanoidRootPart.Transparency = 0.7
+                        humanoidRootPart.BrickColor = BrickColor.new("Bright red") -- Changed color to red
+                        humanoidRootPart.Material = Enum.Material.Neon -- Changed material to Neon
+                        humanoidRootPart.CanCollide = false
+                    end
+                end)
+            end
+        end
+    end
+end)
+
+    	print("button pressed")
+  	end    
+})
+
+MainTab:AddButton({
+	Name = "ESP",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/zhR1sJAQ"))()
+  	end    
+})
+
+local MainTab = Window:MakeTab({
+    Name = "Credits",
+    Icon = "rbxassetid://17079723134"
+})
+
+MainTab:AddLabel("UI:Orion")
+
+MainTab:AddLabel("Made By:awes0me & Ksawier")
+
+MainTab:AddLabel("Made In April 13, 2024")
+
+MainTab:AddLabel("Have Fun!")
