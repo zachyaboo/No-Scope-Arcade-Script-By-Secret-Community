@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "[SCS]MVSD",IntroEnabled = true,IntroText = "SCS", HidePremium = false, SaveConfig = true, ConfigFolder = "SCS"})
+local Window = OrionLib:MakeWindow({Name = "[SCS]",IntroEnabled = true,IntroText = "SCS", HidePremium = false, SaveConfig = true, ConfigFolder = "SCS"})
 
 local MainTab = Window:MakeTab({
     Name = "Main Tab",
@@ -39,7 +39,7 @@ end)
 MainTab:AddButton({
 	Name = "ESP",
 	Callback = function()
-      		loadstring(game:HttpGet("https://pastebin.com/raw/zhR1sJAQ"))()
+      		https://pastebin.com/raw/rSUGN1fK
   	end    
 })
 
